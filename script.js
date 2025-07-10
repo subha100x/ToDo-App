@@ -1,40 +1,67 @@
-function addTask() {
-    const taskInput = document.getElementById('taskInput');
-    const taskText = taskInput.value.trim();
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
 
-    if (taskText === '') {
-        alert('Please enter a task');
-        return;
-    }
+.container {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 350px;
+}
 
-    const taskList = document.getElementById('taskList');
-    const listItem = document.createElement('li');
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    // Task text span
-    const taskSpan = document.createElement('span');
-    taskSpan.textContent = taskText;
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
 
-    // Complete button
-    const completeButton = document.createElement('button');
-    completeButton.innerHTML = '✔'; // Green checkmark icon
-    completeButton.onclick = () => {
-        taskSpan.classList.toggle('completed');
-    };
+button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+}
 
-    // Remove button
-    const removeButton = document.createElement('button');
-    removeButton.textContent = 'Remove';
-    removeButton.className = 'remove-btn';
-    removeButton.onclick = () => {
-        taskList.removeChild(listItem);
-    };
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
 
-    // Append everything
-    listItem.appendChild(completeButton);
-    listItem.appendChild(taskSpan);
-    listItem.appendChild(removeButton);
+li {
+  background: #f9f9f9;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    taskList.appendChild(listItem);
+li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
 
-    taskInput.value = ''; // Clear input field
+.delete-btn {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
 }
