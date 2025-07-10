@@ -1,127 +1,67 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
 body {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #e8f4f8; /* Updated background color */
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
 }
 
-/* Container to hold everything */
 .container {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    width: 500px;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 350px;
 }
 
-/* Heading styling */
-h1 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    color: #1a73e8; /* Updated to a calming blue tone */
-    text-align: center;
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Input container for task entry */
-.input-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-/* Input box styling */
 input[type="text"] {
-    width: 70%;
-    padding: 12px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 2px solid #1a73e8; /* Updated border color */
-    outline: none;
-    transition: 0.3s;
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
-input[type="text"]:focus {
-    border-color: #0056b3; /* Darker focus border */
-    box-shadow: 0 0 5px #0056b3;
-}
-
-/* Add button styling */
 button {
-    padding: 12px 20px;
-    background-color: #1a73e8;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-button:hover {
-    background-color: #0056b3; /* Darker hover color */
-}
-
-/* Task list styling */
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
 }
 
-/* Task item styling */
 li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px dashed #ccc; /* Updated to dashed separator */
-    font-size: 1rem;
+  background: #f9f9f9;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Task completion button styling */
-li button {
-    background-color: transparent;
-    color: #34a853; /* Green for complete button */
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: 0.3s;
+li.completed {
+  text-decoration: line-through;
+  color: gray;
 }
 
-li button:hover {
-    color: #0c661b; /* Darker green on hover */
-}
-
-/* Remove button */
-li .remove-btn {
-    background-color: #ea4335; /* Red color for remove button */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-li .remove-btn:hover {
-    background-color: #b71c1c; /* Darker red on hover */
-}
-
-/* Task text styling */
-.completed {
-    text-decoration: line-through;
-    color: #6c757d;
+.delete-btn {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
 }
